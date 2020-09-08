@@ -1,0 +1,25 @@
+.movie-card {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    max-width: 300px;
+    width: 300px;
+}
+
+.movie-card.card {
+    height: 450px;
+}
+
+.card-footer-badge {
+    font-size: 1rem;
+}
+
+.card-delete-button {
+    background-color: rgb(240, 30, 30);
+    border-radius: 10px;
+    border: none;
+    font-size: 12px;
+    color: white;
+    line-height: 30px;
+    height: 30px;
+    min-width: 60px;
+}
