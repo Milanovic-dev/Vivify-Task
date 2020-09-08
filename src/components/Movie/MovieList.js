@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 import MovieCard from './MovieCard';
 
-const getMovies = (movies, onDelete) => (
+const getMovies = (movies, onDelete, onRate) => (
   <div className="card-deck">
     {movies.map(movie => (
-      <MovieCard key={movie.id} movie={movie} onDelete={onDelete} />
+      <MovieCard key={movie.id} movie={movie} onDelete={onDelete} onRate={onRate} />
     ))}
   </div>
 );
 
-const MovieList = ({ movies, onDelete }) => <div>{getMovies(movies, onDelete)}</div>;
+const MovieList = ({ movies, onDelete, onRate }) => <div>{getMovies(movies, onDelete, onRate)}</div>;
 
 MovieList.defaultProps = {
   movies: [],

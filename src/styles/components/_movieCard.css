@@ -11,6 +11,7 @@
 
 .card-footer-badge {
     font-size: 1rem;
+    cursor: default;
 }
 
 .card-delete-button {
@@ -22,4 +23,5 @@
     line-height: 30px;
     height: 30px;
     min-width: 60px;
+    cursor: pointer;
 }

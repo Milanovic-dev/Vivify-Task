@@ -31,19 +31,19 @@ const AddMovie = ({onCreate}) => {
     let flag = true;
 
     if(title == ''){
-      errorsObj.title = 'Title is required';
+      errorsObj.title = '*Title is required';
       flag = false;
     }
     if(subtitle == ''){
-      errorsObj.subtitle = 'Subtitle is required';
+      errorsObj.subtitle = '*Subtitle is required';
       flag = false;
     }
     if(description == ''){
-      errorsObj.description = 'Description is required';
+      errorsObj.description = '*Description is required';
       flag = false;
     }
     if(imageUrl == ''){
-      errorsObj.imageUrl = 'Image is required';
+      errorsObj.imageUrl = '*Image is required';
       flag = false;
     }
 
@@ -64,13 +64,13 @@ const AddMovie = ({onCreate}) => {
         <div className="form-error">{errors.subtitle ? errors.subtitle : null}</div>
       </div>
 			<div>
-				<input className="form-input" type="textarea" placeholder="Opis" onChange={(e) => setDescription(e.target.value)}></input>
-        <div className="form-error">{errors.description ? errors.description : null}</div>
-			</div>
-			<div>
 				<input className="form-input" type="text" placeholder="Slika" onChange={(e) => setImageUrl(e.target.value)}></input>
         <div className="form-error">{errors.imageUrl ? errors.imageUrl : null}</div>
       </div>
+			<div>
+				<textarea placeholder="Opis..." rows="6" cols="40" onChange={(e) => setDescription(e.target.value)} style={{marginTop: '10px'}}></textarea>
+        <div className="form-error">{errors.description ? errors.description : null}</div>
+			</div>
 			<button className="form-submit">Create</button>
 		</form>
 	</div>
