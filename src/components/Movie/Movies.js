@@ -27,7 +27,6 @@ const Movies = () => {
     temp.map((item, i) => {
       if(item.id == id){
         item.ratings.push(rating);
-        item.rating = avgRating(item.ratings);
         const avg = avgRating(item.ratings)
         const intPart = Math.trunc(avg);
         let floatPart = Number((avg - intPart).toFixed(2));
